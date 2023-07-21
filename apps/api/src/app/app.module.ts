@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { TodosModule } from './todos/todos.module';
-import { PrismaModule } from './prisma/prisma.module';
+import { ApiSharedPrismaModule } from '@cowtrol/api-shared/prisma';
+import { ApiFeatureTodoModule } from '@cowtrol/api/feature-todo';
 
 @Module({
-  imports: [PrismaModule, TodosModule],
+  imports: [ApiSharedPrismaModule, ApiFeatureTodoModule],
   controllers: [],
   providers: [],
 })

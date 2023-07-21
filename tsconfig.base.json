@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cowtrol/api-shared/prisma": ["libs/api-shared/prisma/src/index.ts"],
+      "@cowtrol/api/data-access-dto": ["libs/api/data-access-dto/src/index.ts"],
+      "@cowtrol/api/data-access-todo": [
+        "libs/api/data-access-todo/src/index.ts"
+      ],
+      "@cowtrol/api/feature-todo": ["libs/api/feature-todo/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -16,5 +16,5 @@
   ],
   "include": [
     "src/**/*.ts"
-  ]
+, "../../libs/api/data-access-todo/src/lib/todos.service.ts", "../../libs/api-shared/prisma/src/lib/prisma.service.ts"  ]
 }

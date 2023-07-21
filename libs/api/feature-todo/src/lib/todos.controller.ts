@@ -1,16 +1,18 @@
 import {
-  Controller,
   Get,
   Post,
   Body,
   Patch,
   Param,
   Delete,
+  Controller,
 } from '@nestjs/common';
-import { TodosService } from './todos.service';
-import { CreateTodoDto } from './dto/create-todo.dto';
-import { UpdateTodoDto } from './dto/update-todo.dto';
-import { TodoDto } from './dto/todo.dto';
+import {
+  CreateTodoDto,
+  TodoDto,
+  UpdateTodoDto,
+} from '@cowtrol/api/data-access-dto';
+import { TodosService } from '@cowtrol/api/data-access-todo';
 
 @Controller('todos')
 export class TodosController {
@@ -27,7 +29,7 @@ export class TodosController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string): Promise<TodoDto> {
+  findOne(@Param('id') id: string): Promise<TodoDto | void> {
     return this.todosService.findOne(+id);
   }
 
